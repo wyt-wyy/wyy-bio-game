@@ -58,15 +58,21 @@ export function Battle({ lang, onToggleLang, onHome }: Props) {
     setBossIndex(0);
     setBossHp(bosses[0].maxHp);
     setPhase('menu');
-    setMessage('');
+    setMessage(ui.whatWill[lang]);
     setChoices([]);
     setPlayerHit(false);
     setPlayerFat(false);
     setBossHurt(false);
-  }, []);
+  }, [lang]);
 
   useEffect(() => {
-    setMessage(ui.whatWill[lang]);
+    setMessage((prev) => {
+      // Keep contextual feedback; refresh only menu / empty prompts on lang switch
+      if (!prev || prev === ui.whatWill.en || prev === ui.whatWill.zh) {
+        return ui.whatWill[lang];
+      }
+      return prev;
+    });
   }, [lang]);
 
   const openFight = () => {

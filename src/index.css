@@ -498,18 +498,27 @@ button {
   0%,
   100% {
     transform: translateX(0);
-    filter: brightness(1);
+    opacity: 1;
+    filter: none;
   }
   20%,
   60% {
     transform: translateX(-8px);
-    filter: brightness(2.2);
+    opacity: 1;
+    filter: brightness(1.35);
   }
   40%,
   80% {
     transform: translateX(8px);
-    filter: brightness(0.8);
+    opacity: 1;
+    filter: brightness(0.9);
   }
+}
+
+.sprite.boss,
+.sprite.mr-wong {
+  opacity: 1;
+  visibility: visible;
 }
 
 @keyframes fatHit {
@@ -590,6 +599,7 @@ button {
 .dialogue-text {
   margin: 0;
   flex: 1;
+  padding: 0.15rem 0.1rem;
   font-size: clamp(0.85rem, 2.6vw, 1.05rem);
   font-weight: 700;
   line-height: 1.45;
@@ -597,6 +607,7 @@ button {
   white-space: pre-wrap;
   overflow-y: auto;
   max-height: 28vh;
+  min-height: 2.5em;
 }
 
 .continue-btn {
