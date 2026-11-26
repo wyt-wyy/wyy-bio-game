@@ -329,6 +329,37 @@ button {
     linear-gradient(180deg, #5aaa4a 0%, #3d8a35 55%, #2f6f2a 100%);
 }
 
+.battle-timer {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  z-index: 6;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  padding: 0.35rem 0.7rem;
+  background: rgba(26, 31, 40, 0.78);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px;
+  color: #fffef8;
+  font-weight: 800;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.battle-timer-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.battle-timer-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 3.2vw, 1.35rem);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
 .enemy-hud {
   position: absolute;
   top: 4%;
@@ -610,6 +641,20 @@ button {
   min-height: 2.5em;
 }
 
+.dialogue-text.fight-q {
+  font-size: clamp(1.25rem, 4vw, 1.7rem);
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+.final-time {
+  margin: 0;
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: #0d5c42;
+}
+
 .continue-btn {
   align-self: flex-end;
   border: 2px solid #1a1a1a;
@@ -689,15 +734,15 @@ button {
 .mc-btn {
   display: flex;
   align-items: flex-start;
-  gap: 0.45rem;
+  gap: 0.6rem;
   text-align: left;
   border: 3px solid #1a1a1a;
   border-radius: 10px;
-  padding: 0.55rem 0.6rem;
+  padding: 0.8rem 0.85rem;
   background: #fffef8;
-  font-weight: 700;
-  font-size: clamp(0.72rem, 2.2vw, 0.9rem);
-  line-height: 1.3;
+  font-weight: 800;
+  font-size: clamp(1.1rem, 3.4vw, 1.45rem);
+  line-height: 1.35;
   color: #1a1a1a;
   transition: background 0.12s ease, transform 0.12s ease;
 }
@@ -709,14 +754,14 @@ button {
 
 .mc-letter {
   flex: 0 0 auto;
-  width: 1.35rem;
-  height: 1.35rem;
+  width: 1.9rem;
+  height: 1.9rem;
   border-radius: 6px;
   background: #1fa97a;
   color: #fff;
   display: grid;
   place-items: center;
-  font-size: 0.75rem;
+  font-size: 1.05rem;
   font-weight: 800;
 }
 

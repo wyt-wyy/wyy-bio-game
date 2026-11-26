@@ -64,6 +64,8 @@ export const ui = {
   continue: { en: 'Continue ▶', zh: '繼續 ▶' },
   playAgain: { en: 'Play again', zh: '再玩一次' },
   home: { en: 'Home', zh: '主頁' },
+  time: { en: 'Time', zh: '時間' },
+  finalTime: { en: 'Time', zh: '用時' },
   teacher: {
     en: 'For Biology teachers & students',
     zh: '適合生物科老師與學生',
