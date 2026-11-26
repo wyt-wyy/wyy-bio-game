@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   bosses,
   GAME_OVER_WEIGHT,
@@ -32,6 +32,13 @@ interface Props {
   onHome: () => void;
 }
 
+function formatElapsed(ms: number): string {
+  const totalSec = Math.max(0, Math.floor(ms / 1000));
+  const mins = Math.floor(totalSec / 60);
+  const secs = totalSec % 60;
+  return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+}
+
 function bossForQuestion(qIndex: number): { boss: Boss; bossIndex: number } {
   const qId = questions[qIndex].id;
   const bossIndex = bosses.findIndex((b) => b.questionIds.includes(qId));
@@ -49,6 +56,9 @@ export function Battle({ lang, onToggleLang, onHome }: Props) {
   const [playerHit, setPlayerHit] = useState(false);
   const [playerFat, setPlayerFat] = useState(false);
   const [bossHurt, setBossHurt] = useState(false);
+  const [elapsedMs, setElapsedMs] = useState(0);
+  const [timerRunning, setTimerRunning] = useState(true);
+  const startedAtRef = useRef(Date.now());
 
   const boss = bosses[bossIndex];
 
@@ -63,6 +73,9 @@ export function Battle({ lang, onToggleLang, onHome }: Props) {
     setPlayerHit(false);
     setPlayerFat(false);
     setBossHurt(false);
+    startedAtRef.current = Date.now();
+    setElapsedMs(0);
+    setTimerRunning(true);
   }, [lang]);
 
   useEffect(() => {
@@ -74,6 +87,23 @@ export function Battle({ lang, onToggleLang, onHome }: Props) {
       return prev;
     });
   }, [lang]);
+
+  useEffect(() => {
+    if (!timerRunning) return;
+    const tick = () => {
+      setElapsedMs(Date.now() - startedAtRef.current);
+    };
+    tick();
+    const id = window.setInterval(tick, 250);
+    return () => window.clearInterval(id);
+  }, [timerRunning]);
+
+  useEffect(() => {
+    if (phase === 'victory' || phase === 'gameover') {
+      setTimerRunning(false);
+      setElapsedMs(Date.now() - startedAtRef.current);
+    }
+  }, [phase]);
 
   const openFight = () => {
     const q = questions[qIndex];
@@ -181,12 +211,19 @@ export function Battle({ lang, onToggleLang, onHome }: Props) {
   const weightPct = Math.min(100, ((weight - START_WEIGHT) / (GAME_OVER_WEIGHT - START_WEIGHT)) * 100);
   const weightBarColor =
     weight >= 85 ? '#e74c3c' : weight >= 75 ? '#f39c12' : '#2ecc71';
+  const elapsedLabel = formatElapsed(elapsedMs);
+  const isEnded = phase === 'victory' || phase === 'gameover';
 
   return (
     <div className="battle-screen">
       <div className="battle-field">
         <div className="sky" />
         <div className="grass" />
+
+        <div className="battle-timer" aria-live="polite">
+          <span className="battle-timer-label">{ui.time[lang]}</span>
+          <span className="battle-timer-value">{elapsedLabel}</span>
+        </div>
 
         <div className="enemy-hud">
           <div className="hud-box">
@@ -242,8 +279,15 @@ export function Battle({ lang, onToggleLang, onHome }: Props) {
       </div>
 
       <div className="battle-ui">
-        <div className="dialogue-box">
-          <p className="dialogue-text">{message}</p>
+        <div className={`dialogue-box${phase === 'fight' ? ' fight-mode' : ''}`}>
+          <p className={`dialogue-text${phase === 'fight' ? ' fight-q' : ''}`}>
+            {message}
+          </p>
+          {isEnded && (
+            <p className="final-time">
+              {ui.finalTime[lang]}: {elapsedLabel}
+            </p>
+          )}
           {(phase === 'feedback' ||
             phase === 'bossDown' ||
             phase === 'nextBoss' ||
@@ -252,7 +296,7 @@ export function Battle({ lang, onToggleLang, onHome }: Props) {
               {ui.continue[lang]}
             </button>
           )}
-          {(phase === 'victory' || phase === 'gameover') && (
+          {isEnded && (
             <div className="end-actions">
               <button type="button" className="continue-btn" onClick={resetGame}>
                 {ui.playAgain[lang]}
