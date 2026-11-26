@@ -642,7 +642,7 @@ button {
 }
 
 .dialogue-text.fight-q {
-  font-size: clamp(1.15rem, 3.6vw, 1.55rem);
+  font-size: clamp(1.25rem, 4vw, 1.7rem);
   line-height: 1.4;
   font-weight: 800;
 }
@@ -734,14 +734,14 @@ button {
 .mc-btn {
   display: flex;
   align-items: flex-start;
-  gap: 0.55rem;
+  gap: 0.6rem;
   text-align: left;
   border: 3px solid #1a1a1a;
   border-radius: 10px;
-  padding: 0.7rem 0.75rem;
+  padding: 0.8rem 0.85rem;
   background: #fffef8;
   font-weight: 800;
-  font-size: clamp(0.95rem, 2.8vw, 1.2rem);
+  font-size: clamp(1.1rem, 3.4vw, 1.45rem);
   line-height: 1.35;
   color: #1a1a1a;
   transition: background 0.12s ease, transform 0.12s ease;
@@ -754,14 +754,14 @@ button {
 
 .mc-letter {
   flex: 0 0 auto;
-  width: 1.65rem;
-  height: 1.65rem;
+  width: 1.9rem;
+  height: 1.9rem;
   border-radius: 6px;
   background: #1fa97a;
   color: #fff;
   display: grid;
   place-items: center;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 800;
 }
 
