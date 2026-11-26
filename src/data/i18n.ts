@@ -25,7 +25,7 @@ export const ui = {
   fight: { en: 'FIGHT', zh: '戰鬥' },
   switch: { en: 'SWITCH', zh: '轉換' },
   help: { en: 'HELP', zh: '提示' },
-  run: { en: 'RUN', zh: '重來' },
+  run: { en: 'RUN', zh: '逃跑' },
   whatWill: {
     en: 'What will Mr. Wong do?',
     zh: '黃老師要做什麼？',
@@ -57,8 +57,8 @@ export const ui = {
     zh: '勝利！你幫助黃老師保持健康了！！',
   },
   gameOver: {
-    en: 'Game Over! Mr. Wong is too heavy (≥ 90 kg). Tap Run to restart.',
-    zh: '遊戲結束！黃老師太重了（≥ 90 kg）。按「重來」重新開始。',
+    en: 'Game Over! Mr. Wong is too heavy (≥ 90 kg). Tap Play again to retry, or Home to leave.',
+    zh: '遊戲結束！黃老師太重了（≥ 90 kg）。按「再玩一次」重試，或按「主頁」離開。',
   },
   hintTitle: { en: 'Help tip', zh: '提示' },
   continue: { en: 'Continue ▶', zh: '繼續 ▶' },
