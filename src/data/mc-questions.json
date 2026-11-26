@@ -1,0 +1,184 @@
+[
+  {
+    "id": 1,
+    "en": {
+      "q": "Which of the following food substances most readily provide energy for the body?",
+      "choices": ["lipids", "proteins", "monosaccharides", "vitamins"]
+    },
+    "zh": {
+      "q": "下列哪種食物物質能最快為人體提供能量？",
+      "choices": ["脂質", "蛋白質", "單糖", "維生素"]
+    },
+    "answer": 2
+  },
+  {
+    "id": 2,
+    "en": {
+      "q": "Which of the following correctly arranges the foods in a meal, from eating most to eating least, in a balanced diet?\n(1) bread\n(2) butter\n(3) ham\n(4) corn",
+      "choices": [
+        "(1), (3), (2), (4)",
+        "(1), (4), (3), (2)",
+        "(3), (1), (4), (2)",
+        "(4), (1), (2), (3)"
+      ]
+    },
+    "zh": {
+      "q": "下列哪項按照均衡膳食中的比例把四種食物從進食最多至進食最少排列？\n(1)麵包\n(2)牛油\n(3)火腿\n(4)玉米",
+      "choices": [
+        "(1)、(3)、(2)、(4)",
+        "(1)、(4)、(3)、(2)",
+        "(3)、(1)、(4)、(2)",
+        "(4)、(1)、(2)、(3)"
+      ]
+    },
+    "answer": 1
+  },
+  {
+    "id": 3,
+    "en": {
+      "q": "The diets of vegetarians usually include beans to make up for the lack of",
+      "choices": ["proteins.", "carbohydrates.", "vitamins.", "lipids."]
+    },
+    "zh": {
+      "q": "素食者的膳食通常包括豆類。豆類為他們提供膳食中可能缺乏的哪種食物物質？",
+      "choices": ["蛋白質", "碳水化合物", "維生素", "脂質"]
+    },
+    "answer": 0
+  },
+  {
+    "id": 4,
+    "en": {
+      "q": "People who suffer from anaemia may lack",
+      "choices": ["calcium.", "iron.", "vitamin C.", "vitamin D."]
+    },
+    "zh": {
+      "q": "患有貧血的人可能缺乏",
+      "choices": ["鈣。", "鐵。", "維生素C。", "維生素D。"]
+    },
+    "answer": 1
+  },
+  {
+    "id": 5,
+    "en": {
+      "q": "Calcium is important for the formation of",
+      "choices": ["haemoglobin.", "bones and teeth.", "hair.", "skin."]
+    },
+    "zh": {
+      "q": "鈣對形成下列哪種（些）物質很重要？",
+      "choices": ["血紅蛋白", "骨骼和牙齒", "頭髮", "皮膚"]
+    },
+    "answer": 1
+  },
+  {
+    "id": 6,
+    "en": {
+      "q": "Fruit juice is usually rich in",
+      "choices": ["starch.", "cellulose.", "glycogen.", "fructose."]
+    },
+    "zh": {
+      "q": "果汁通常含有豐富的",
+      "choices": ["澱粉。", "纖維素。", "糖原。", "果糖。"]
+    },
+    "answer": 3
+  },
+  {
+    "id": 7,
+    "en": {
+      "q": "Which of the following statements about the food pyramid is incorrect?",
+      "choices": [
+        "In the food pyramid, foods are classified into six food groups.",
+        "The relative size of each food group in the food pyramid represents the suggested proportion of the food in a balanced diet.",
+        "The food pyramid suggests that we eat more vegetables than dairy products.",
+        "The food pyramid suggests that people of different ages eat the same amount of food."
+      ]
+    },
+    "zh": {
+      "q": "下列哪項有關食物金字塔的敍述是不正確的？",
+      "choices": [
+        "食物金字塔把食物分成六大類。",
+        "金字塔每層的面積與每種食物類別應攝取的分量成正比。",
+        "食物金字塔建議進食蔬菜的分量應較奶類製品多。",
+        "食物金字塔建議不同年齡組別人士應進食相同分量的食物。"
+      ]
+    },
+    "answer": 3
+  },
+  {
+    "id": 8,
+    "en": {
+      "q": "In Hong Kong, more and more school children are becoming overweight and obese because they\n(1) lose heat more slowly than adults.\n(2) eat too much foods with high sugar content.\n(3) do little exercise.",
+      "choices": [
+        "(3) only",
+        "(1) and (2) only",
+        "(2) and (3) only",
+        "(1), (2) and (3)"
+      ]
+    },
+    "zh": {
+      "q": "香港愈來愈多學童超重和肥胖，原因是他們\n(1)失熱的速率較成人低。\n(2)進食過多高糖份的食物。\n(3)太少運動。",
+      "choices": [
+        "只有 (3)",
+        "只有 (1) 和 (2)",
+        "只有 (2) 和 (3)",
+        "(1)、(2) 和 (3)"
+      ]
+    },
+    "answer": 2
+  },
+  {
+    "id": 9,
+    "en": {
+      "q": "Which of the following combinations correctly matches the foodstuffs with the reason why eating more of them is beneficial to children’s health?\nMilk / Beans",
+      "choices": [
+        "Helps provide energy for body activities / Helps prevent rickets",
+        "Helps provide energy for body activities / Helps formation of blood cells",
+        "Helps the development of bone / Helps prevent rickets",
+        "Helps the development of bone / Helps build muscles"
+      ]
+    },
+    "zh": {
+      "q": "下列哪個組合正確配對食物和多吃它們對兒童身體健康的益處？\n牛奶 / 豆",
+      "choices": [
+        "有助提供能量供身體活動所需 / 有助預防軟骨病",
+        "有助提供能量供身體活動所需 / 有助形成血細胞",
+        "有助製造骨骼 / 有助預防軟骨病",
+        "有助製造骨骼 / 有助製造肌肉"
+      ]
+    },
+    "answer": 3
+  },
+  {
+    "id": 10,
+    "en": {
+      "q": "Which of the following are not a source of energy even under starvation?",
+      "choices": ["carbohydrates", "lipids", "proteins", "vitamins"]
+    },
+    "zh": {
+      "q": "下列哪種食物物質，即使在飢餓的情況下，也不會提供能量？",
+      "choices": ["碳水化合物", "脂質", "蛋白質", "維生素"]
+    },
+    "answer": 3
+  },
+  {
+    "id": 11,
+    "en": {
+      "q": "The table below shows the information of four individuals.\nM: Female, 66, Retired\nN: Female, 5, Student\nO: Male, 45, Office worker\nP: Male, 45, Construction worker\nWhich of the following correctly arranges the individuals in ascending order of energy requirement?",
+      "choices": [
+        "N, M, O, P",
+        "N, P, M, O",
+        "M, O, P, N",
+        "M, N, O, P"
+      ]
+    },
+    "zh": {
+      "q": "下表顯示四名人士的資料。\nM：女，66，退休\nN：女，5，學生\nO：男，45，文職人員\nP：男，45，修路工人\n下列哪項按各人的能量需求由低至高排列？",
+      "choices": [
+        "N, M, O, P",
+        "N, P, M, O",
+        "M, O, P, N",
+        "M, N, O, P"
+      ]
+    },
+    "answer": 0
+  }
+]
