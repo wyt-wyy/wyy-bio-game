@@ -324,7 +324,7 @@ export function Battle({ lang, onToggleLang, onHome }: Props) {
             <button type="button" className="cmd help" onClick={openHelp}>
               {ui.help[lang]}
             </button>
-            <button type="button" className="cmd run" onClick={resetGame}>
+            <button type="button" className="cmd run" onClick={onHome}>
               {ui.run[lang]}
             </button>
           </div>
